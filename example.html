@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle Display of Elements</title>
+    <style>
+            body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin-top: 50px;
+    }
+
+    #myList {
+        margin: 20px auto;
+        padding: 0;
+    }
+
+    #myList li {
+        background-color: #f7f7f7;
+        border: 1px solid #ddd;
+        margin-bottom: 5px;
+        padding: 10px;
+        list-style-type: none;
+        width: 200px;
+        text-align: left;
+        margin: auto;
+    }
+
+    button {
+        background-color: #4285f4;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        margin: 0 5px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1em;
+    }
+
+    button:hover {
+        background-color: #3079ed;
+    }
+    </style>
+</head>
+<body>
+    <ul id="myList">
+        <li>List Item 1</li>
+        <li>List Item 2</li>
+        <li>List Item 3</li>
+    </ul>
+    <button id="hideButton">Hide</button>
+    <button id="showButton">Show</button>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+    const myList = document.getElementById('myList');
+    const hideButton = document.getElementById('hideButton');
+    const showButton = document.getElementById('showButton');
+
+    hideButton.addEventListener('click', function () {
+        myList.style.display = 'none';
+    });
+
+    showButton.addEventListener('click', function () {
+        myList.style.display = 'block';
+    });
+});
+
+    </script>
+</body>
+</html>

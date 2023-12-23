@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            height: 50px;
+            width: 50px;
+            background-color: black;
+            margin: 1rem;
+        }
+        .active{
+            border: 5px solid yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+<script>
+// on click of any div add a border of 2px solid of yellow color. 
+    const divs = document.querySelectorAll('div');
+    divs.forEach(div => {
+        div.addEventListener('click', () => {
+            divs.forEach(div => {
+                div.classList.remove('active');
+            })
+            div.classList.add('active');
+        })
+    })
+</script>
+</body>
+
+</html>
