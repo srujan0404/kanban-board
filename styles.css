@@ -1,3 +1,9 @@
+:root {
+    --bgColor: #EEF0E5;
+    --darkBgColor: #468a60;
+    --iconColor: #304D30
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -5,27 +11,16 @@
 }
 
 .toolbox-cont {
-    width: 100vw;
+    background-color: var(--darkBgColor);
     height: 6rem;
-    background-color: black;
     display: flex;
     align-items: center;
 }
 
 .toolbox-priority-cont {
     height: 3rem;
-    width: 18rem;
-    background-color: aliceblue;
-    margin-left: 5rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-}
-
-.action-btn-cont {
-    height: 3rem;
-    width: 8rem;
-    background-color: aliceblue;
+    width: 20rem;
+    background-color: var(--bgColor);
     margin-left: 5rem;
     display: flex;
     align-items: center;
@@ -38,78 +33,55 @@
 }
 
 .red {
-    background-color: red;
+    background-color: #750E21;
 }
 
 .blue {
-    background-color: blue;
+    background-color: #213555;
 }
 
 .green {
-    background-color: green;
+    background-color: #163020;
 }
 
 .pink {
-    background-color: violet;
+    background-color: #E9D5DA;
+}
+
+.action-btn-cont {
+    height: 3rem;
+    width: 10rem;
+    background-color: var(--bgColor);
+    margin-left: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
 .add-btn {
     font-size: 1.75rem;
+    color: var(--darkBgColor);
 }
 
 .remove-btn {
     font-size: 1.5rem;
-}
-
-.modal-cont {
-    height: 50vh;
-    width: 50vw;
-    background-color: burlywood;
-    display: none;
-    position: fixed;
-    left: 25vw;
-    top: 25vh;
-    border: 1px solid black;
-}
-
-.textarea-cont {
-    height: 100%;
-    width: 75%;
-    border: none;
-    outline: none;
-    resize: none;
-    font-size: 2rem;
-    padding: 2rem;
-    border-right: 2px solid black;
-}
-
-.priority-color-cont {
-    height: 100%;
-    width: 25%;
-    background-color: aliceblue;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    flex-direction: column;
-}
-
-.priority-color {
-    height: 3rem;
-    width: 5rem;
+    color: var(--darkBgColor);
 }
 
 .main-cont {
-    margin: 2rem 0rem;
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
     justify-content: space-evenly;
+    margin: 2rem 1rem;
 }
 
 .ticket-cont {
     height: 10rem;
     width: 15rem;
-    background-color: cornsilk;
+    background-color: yellow;
+    position: relative;
+    background-color: var(--bgColor);
 }
 
 .ticket-color {
@@ -118,16 +90,61 @@
 
 .ticket-id {
     height: 1.5rem;
-    font-weight: bold;
-    background-color: grey;
+    font-weight: 600;
+    font-size: 0.75rem;
 }
 
 .ticket-area {
-    height: calc(10rem - 1.5rem - 1rem);
-    padding: 5px;
-    font-size: 1.25rem;
+    padding: 3px;
+    height: calc(10rem - 1rem - 1.5rem);
+    font-size: 1rem;
+    outline: none;
+}
+
+.modal-cont {
+    height: 50vh;
+    width: 50vw;
+    display: none;
+    border: 2px solid grey;
+    position: fixed;
+    left: 25vw;
+    top: 25vh;
+    z-index: 100;
+}
+
+.textarea-cont {
+    height: 100%;
+    width: 75%;
+    outline: none;
+    border: none;
+    resize: none;
+    font-size: 2rem;
+    padding: 2rem;
+    border-right: 2px solid grey;
+}
+
+.priority-color-cont {
+    height: 100%;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: var(--bgColor);
+
+}
+
+.priority-color {
+    height: 3rem;
+    width: 5rem;
 }
 
 .active {
-    border: 5px solid yellow;
+    border: 5px solid #FFEA11;
+}
+
+.lock-unlock-btn {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
 }
